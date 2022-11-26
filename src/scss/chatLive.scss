@@ -1,0 +1,108 @@
+$chat-bcg: rgb(255, 82, 2);
+$color-light: #f5f5f5;
+$active-container-bcg: rgba(0, 0, 0, 0.568);
+$active-bcg: rgb(255, 82, 2);
+$contact-bcg: rgba(0, 0, 0, 0.116);
+
+
+.chatLive{
+    background-color: $chat-bcg;
+    bottom: 1.5vh;
+    border-radius: 50%;
+    display: grid;
+    height: 7vh;
+    place-content: center;
+    position: absolute;
+    right: 1.5vh;
+    width: 7vh;
+    z-index: 1;
+    &:hover{
+        cursor: pointer;
+    }
+    &-icon-container{
+        position: relative;
+    }
+    &-icon{
+        color: $color-light;
+        font-size: 3vh;
+        &-notification{
+            background-color: $chat-bcg;
+            bottom: -0.75vh;
+            border-radius: 50%;
+            color: $color-light;
+            font-size: 2vh;
+            font-weight: 900;
+            height: 3.5vh;
+            line-height: 3.5vh;
+            position: absolute;
+            right: -0.75vh;
+            text-align: center;
+            width: 3.5vh;
+        }
+    }
+    &-page{
+        background-color: $active-container-bcg;
+        display: grid;
+        height: 100vh;
+        left: 0;
+        position: absolute;
+        place-items: center;
+        top: 0;
+        transition: .3s;
+        width: 100%;
+        z-index: 1000;
+        &-cancel{
+            background-color: $active-bcg;
+            border: none;
+            border-radius: 50%;
+            color: $color-light;
+            font-size: 3vh;
+            font-weight: bold;
+            height: 6vh;
+            position: absolute;
+            right: -3vh;
+            top: -3vh;
+            transition: .3s;
+            width: 6vh;
+            &:hover{
+                cursor: pointer;
+                scale: 1.1;
+            }
+        }
+        &-notification{
+            background-color: $active-bcg;
+            border-radius: 1vh;
+            height: 70vh;
+            padding: 2vh;
+            position: relative;
+            width: 45vh;
+            &-container{
+                align-items: center;
+                background-color: $color-light;
+                display: flex;
+                flex-direction: column-reverse;
+                height: 100%;
+                overflow-y: scroll;
+                width: 100%;
+            }
+            &-contact{
+                background-color: $contact-bcg;
+                margin: 1vh 0;
+                text-align: center;
+                width: 90%;
+                &-name{
+                    border-bottom: 1px solid $color-light;
+                    font-size: 2vh;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    padding: 1vh;
+                }
+                &-message{
+                    font-size: 1.7vh;
+                    height: min-content;
+                    padding: 2vh;
+                }
+            }
+        }
+    }
+}

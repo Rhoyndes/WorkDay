@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 40px);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 10fr;
+  gap: 2vh;
+}
+
+.error {
+  left: 0;
+  top: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 5vh;
+}
+.error__header {
+  font-size: 10vh;
+  font-weight: 700;
+  color: rgb(150, 150, 150);
+}
+.error__header-description {
+  font-size: 6vh;
+  font-weight: 700;
+  color: rgb(150, 150, 150);
+}
+.error__icon {
+  font-size: 10vh;
+  font-weight: 700;
+  color: rgb(150, 150, 150);
+}
+.error__button-cancel {
+  font-size: 5vh;
+  font-weight: 700;
+  color: rgb(150, 150, 150);
+  background-color: transparent;
+  border: 0.5vh solid rgb(150, 150, 150);
+  padding: 1vh 8vh;
+  transition: 0.3s;
+}
+.error__button-cancel:hover {
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+  border: 0.5vh solid rgb(100, 100, 100);
+}
+
+.chatLive {
+  display: grid;
+  place-content: center;
+  position: absolute;
+  bottom: 1.5vh;
+  right: 1.5vh;
+  width: 7vh;
+  height: 7vh;
+  background-color: rgb(255, 82, 2);
+  border-radius: 50%;
+  z-index: 1;
+}
+.chatLive:hover {
+  cursor: pointer;
+}
+.chatLive-icon-container {
+  position: relative;
+}
+.chatLive-icon {
+  font-size: 3vh;
+  color: #f5f5f5;
+}
+.chatLive-icon-notification {
+  width: 3.5vh;
+  height: 3.5vh;
+  position: absolute;
+  text-align: center;
+  line-height: 3.5vh;
+  bottom: -100%;
+  right: -80%;
+  border-radius: 50%;
+  background-color: rgb(255, 82, 2);
+  font-size: 2vh;
+  font-weight: 900;
+  color: #f5f5f5;
+}
+.chatLive-page {
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.568);
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+}
+.chatLive-page-cancel {
+  position: absolute;
+  right: -2vh;
+  top: -2vh;
+  font-size: 3vh;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: rgb(255, 82, 2);
+  border: none;
+  color: #f5f5f5;
+  transition: 0.3s;
+}
+.chatLive-page-cancel:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+.chatLive-page-notification {
+  position: relative;
+  background-color: rgb(255, 82, 2);
+  width: 45vh;
+  height: 70vh;
+  border-radius: 2vh;
+  padding: 4vh;
+}
+.chatLive-page-notification-container {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chatLive-page-notification-contact {
+  padding: 1vh;
+  text-align: center;
+  margin-top: 2vh;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.116);
+}
+.chatLive-page-notification-contact-name {
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1vh;
+  border-bottom: 1px solid whitesmoke;
+}
+.chatLive-page-notification-contact-message {
+  padding: 1vh;
+}/*# sourceMappingURL=App.css.map */

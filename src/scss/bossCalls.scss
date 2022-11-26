@@ -1,0 +1,79 @@
+$container-bcg: #00000048;
+$boss-bcg: rgb(73, 73, 73);
+$color-orange: rgb(255,82,2);
+$color-light: #f5f5f5; 
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
+
+.bossCalls-background{
+    background-color: $container-bcg;
+    display: grid;
+    height: 100vh;
+    left: 0;
+    place-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+.bossCalls-container{
+    background-color: $boss-bcg;
+    border-radius: 1vh;
+    display: grid;
+    height: 35vh;
+    place-content: center;
+    position: relative;
+    width: 65vh;
+}
+.bossCalls-time{
+    color: $color-orange;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.bossCalls-name{
+    border-bottom: 1px solid $color-light;
+    color: $color-light;
+    font-size: 6vh;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 1vh;
+    text-align: center;
+    text-transform: uppercase;
+    width: 30vh;
+}
+.bossCalls-icon{
+    color: $color-light;
+    font-size: 8vh;
+    left: 5%;
+    position: absolute;
+    top: 10%;
+}
+.bossCalls-button{
+    background-color: transparent;
+    border: 0.35vh solid $color-orange;
+    border-radius: 1vh;
+    color: $color-orange;
+    font-size: 4vh;
+    font-weight: 700;
+    margin-top: 4vh;
+    padding: 0.5vh 1vh;
+    pointer-events: none;
+    transition: .3s;
+}

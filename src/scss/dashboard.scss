@@ -1,0 +1,114 @@
+$dashboard-bcg: rgb(73, 73, 73);
+$color-light: #fff;
+$card-bcg: rgba(255, 255, 255, 0.589);
+$color-orange: rgb(255, 82, 2);
+$color-dark: #000;
+$color-lightsmoke: #f5f5f5;
+
+
+.dashboard{
+    background-color: $dashboard-bcg;
+    grid-area: 2 / 2 / 3 / 3;
+    position: relative;
+    transition: .3s;
+    height: 100%;
+    &__nav{
+        border-bottom: 1px solid $color-light;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        &-list{
+            display: flex;
+            gap: 6vh;
+            margin-left: 10vh;
+        }
+        &-item{
+            color: $color-light;
+            font-size: 2vh;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    }
+    &__array{
+        align-content: flex-start;
+        border-bottom: 1px solid $color-light;
+        display: flex;
+        flex-wrap: wrap;
+        height: 75%;
+        margin-top: 5vh;
+        overflow-y: scroll;
+        padding: 0 10%;
+        position: absolute;
+        width: 100%;
+        &-item{
+            border-radius: 1vh;
+            background-color: $card-bcg;
+            height: min-content;
+            margin: 1% 2.5%;
+            width: 20%;
+            &-header{
+                display: flex;
+                height: min-content;
+                justify-content: flex-start;
+                padding: 1.5vh;
+                position: relative;
+                &::before{
+                    background-color: $color-light;
+                    bottom: 0;
+                    content: "";
+                    height: 1px;
+                    position: absolute;
+                    width: 80%;
+                }
+                &-title{
+                    border-left: 2px solid $color-orange;
+                    font-size: 2vh;
+                    font-weight: 700;
+                    padding-left: 1.5vh;
+                    width: 50%;
+                }
+                &-cancel{
+                    background-color: transparent;
+                    border: none;
+                    font-size: 1.5vh;
+                    position: absolute;
+                    right: .5vh;
+                    top: .5vh;
+                    transition: .3s;
+                    &:hover{
+                        color: $color-orange;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &-main{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                justify-content: flex-end;
+                padding: 2vh;
+                &-description{
+                    font-size: 1.8vh;
+                    font-weight: 100;
+                    height: min-content;
+                    text-align: center;
+                    transition: .3s;
+                }
+                &-button{
+                    border: 1px solid $color-dark;
+                    border-radius: 0.5vh;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1.6vh;
+                    font-weight: 600;
+                    padding: 0.5vh 1vh;
+                    transition: .3s;
+                    &:hover{
+                        background-color: $color-lightsmoke;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

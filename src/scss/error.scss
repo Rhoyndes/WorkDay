@@ -1,0 +1,40 @@
+$bcg-error: #f5f5f5;
+$color: rgb(150,150,150);
+$hover-color: rgb(100, 100, 100);
+
+.error{
+    background-color: $bcg-error;
+    display: grid;
+    font-weight: 700;
+    gap: 5vh;
+    height: 100%;
+    left: 0;
+    place-content: center;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    &__header{
+        color: $color;
+        font-size: 10vh;
+        &-description{
+            font-size: 6vh;
+            color: $color;
+        }
+    }
+    &__button-cancel{
+        background-color: transparent;
+        border: 0.5vh solid $color;
+        color: $color;
+        font-size: 4vh;
+        font-weight: 700;
+        padding: 0.5vh 10vh;
+        transition: .3s;
+        &:hover{
+            border: 0.5vh solid $hover-color;
+            cursor: pointer;
+            color: $hover-color;
+        }
+    }
+}

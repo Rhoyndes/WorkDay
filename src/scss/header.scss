@@ -1,0 +1,106 @@
+$header-bcg: rgb(73, 73, 73);
+$color-orange: rgb(255, 82, 2);
+$color-light: #f5f5f5;
+$not-container-bcg: #811313cb;
+$msg-bcg: rgb(250, 130, 74);
+$color-white: #fff;
+
+.header{
+    background-color: $header-bcg;
+    display: flex;
+    grid-area: 1 / 2 / 2 / 3;
+    height: 100%;
+    justify-content: space-between;
+    padding: 2vh 5vh;
+    position: relative;
+    transition: .3s;
+    width: 100%;
+    &__notificationList{
+        background-color: $color-orange;
+        border-radius: 1vh;
+        display: grid;
+        height: 35vh;
+        place-items: center;
+        position: absolute;
+        right: 5vh;
+        top: 90%;
+        width: 15vw;
+        z-index: 1;
+        &-container{
+            background-color: $not-container-bcg;
+            display: flex;
+            flex-direction: column-reverse;
+            height: 90%;
+            overflow-y: scroll;
+            width: 90%;
+            &-msg{
+                background-color:  $msg-bcg;
+                border-radius: 1vh;
+                color: $color-light;
+                margin: 1vh auto;
+                padding: 1vh;
+                text-align: center;
+                width: 90%;
+            }
+        }
+        &-item{
+            background-color: $color-light;
+            width: 100%;
+            height: 10%;
+        }
+    }
+    &__logo{
+        background-color: $color-orange;
+        border-radius: 1vh;
+        display: flex;
+        height: 8vh;
+        justify-content: center;
+        width: 8vh;
+        &-text{
+            align-self: flex-start;
+            color: $color-white;
+            font-size: 6vh;
+            font-weight: bold;
+            &:nth-last-child(1){
+                align-self: flex-end;
+            }
+        }
+    }
+    &__user{
+        height: 8vh;
+        border-bottom: 2px solid $color-orange;
+        &-icons{
+            align-items: center;
+            display: flex;
+            gap: 2vh;
+            height: 100%;
+        }
+        &-avatar, &-notification{
+            color: $color-white;
+            font-size: 3vh;
+            transition: .2s;
+            &:hover{
+                cursor: pointer;
+                scale: 1.1;
+            }
+
+        }
+        &-notification{
+            position: relative;
+            &-number{
+                background-color: $color-orange;
+                border-radius: 50%;
+                color: $color-white;
+                font-size: 1.6vh;
+                font-weight: 900;
+                height: 2.5vh;
+                line-height: 2.5vh;
+                position: absolute;
+                right : -1.2vh;
+                top: -1vh;
+                text-align: center;
+                width: 2.5vh;
+            }
+        }
+    }
+}
