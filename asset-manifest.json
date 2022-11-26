@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/WorkDay/static/css/main.3fe5e478.css",
+    "main.js": "/WorkDay/static/js/main.4d383385.js",
+    "static/js/787.28cb0dcd.chunk.js": "/WorkDay/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/WorkDay/index.html",
+    "main.3fe5e478.css.map": "/WorkDay/static/css/main.3fe5e478.css.map",
+    "main.4d383385.js.map": "/WorkDay/static/js/main.4d383385.js.map",
+    "787.28cb0dcd.chunk.js.map": "/WorkDay/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fe5e478.css",
+    "static/js/main.4d383385.js"
+  ]
+}
