@@ -4,11 +4,11 @@ Hints:\
 -The first two by removing the designs on the slider(2 messages)\
 -Next trying to change the number of tasks(1 messages)\
 -Read the news or wait(2 messages)\
--delete all tasks, now correctly remove themselves(1 messages)\
+-delete all tasks, now correctly remove themselves(1 messages)
 
 If you have logged out:\
 username-Daniel\
-password-Carrot123\
+password-Carrot123
 
 # Getting Started with Create React App
 
